@@ -20,13 +20,13 @@ cmake_minimum_required(VERSION 2.8)
 # tools to be used for programming the AVR
 ##################################################################################
 set(AVR_UPLOADTOOL avrdude)
-set(AVR_PROGRAMMER usbasp)
-set(AVR_UPLOADTOOL_PORT usb)
+#set(AVR_PROGRAMMER usbasp)
+#set(AVR_UPLOADTOOL_PORT usb)
 
 #### For Arduino bootloader:
-#set(AVR_PROGRAMMER arduino)
-#set(AVR_UPLOADTOOL_PORT /dev/tty.wchusbserial1420)
-#set(AVR_UPLOADTOOL_BITRATE 57600)
+set(AVR_PROGRAMMER arduino)
+set(AVR_UPLOADTOOL_PORT /dev/tty.wchusbserial14130)
+set(AVR_UPLOADTOOL_BITRATE 57600)
 
 
 # AVR and fuses needs to be set
@@ -46,7 +46,7 @@ INCLUDE(generic-gcc-avr.cmake)
 ##########################################################################
 # name your project
 ##########################################################################
-project(avr_project_template)
+project(sbus_test)
 
 ##################################################################################
 # add all sources and headers from ./src
